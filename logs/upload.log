@@ -1,0 +1,182 @@
+673  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 14456 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+687  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+687  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+2304 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.955 seconds (process running for 2.82)
+2306 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+54382 [http-nio-8080-exec-1] INFO  c.m.u.s.FilesStorageServiceImpl - File February_Sunset_in_Tallinn.jpg saved as uploads\8B5B15A6EC4A2BFCA945CFD09AEC602A\13777112bf8c41c2a40f653a3868702b.jpg, url: http://localhost:8080/file/8B5B15A6EC4A2BFCA945CFD09AEC602A/13777112bf8c41c2a40f653a3868702b.jpg
+54444 [http-nio-8080-exec-1] INFO  c.m.u.s.FilesStorageServiceImpl - File 20190502_Newhaven_to_Dieppe_Ferry_5.jpg saved as uploads\8B5B15A6EC4A2BFCA945CFD09AEC602A\77e0e274132c4cebae76fb80cb6db5f4.jpg, url: http://localhost:8080/file/8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+72709 [http-nio-8080-exec-3] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/13777112bf8c41c2a40f653a3868702b.jpg
+79627 [http-nio-8080-exec-9] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/13777112bf8c41c2a40f653a3868702b.jpg
+100143 [http-nio-8080-exec-6] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/13777112bf8c41c2a40f653a3868702b.jpg
+101095 [http-nio-8080-exec-10] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/13777112bf8c41c2a40f653a3868702b.jpg
+393224 [http-nio-8080-exec-3] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+438239 [http-nio-8080-exec-5] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+555  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 3120 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+557  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+557  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+1942 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.7 seconds (process running for 2.271)
+1944 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+2223 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+3310 [http-nio-8080-exec-2] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+8349 [http-nio-8080-exec-3] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+10151 [http-nio-8080-exec-7] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+11310 [http-nio-8080-exec-5] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+12365 [http-nio-8080-exec-6] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+13286 [http-nio-8080-exec-4] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+14099 [http-nio-8080-exec-8] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+14959 [http-nio-8080-exec-9] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+15144 [http-nio-8080-exec-10] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+15327 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+15512 [http-nio-8080-exec-2] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+15686 [http-nio-8080-exec-3] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+15853 [http-nio-8080-exec-7] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+16056 [http-nio-8080-exec-5] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+16235 [http-nio-8080-exec-6] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+16455 [http-nio-8080-exec-4] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+17074 [http-nio-8080-exec-8] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+47123 [http-nio-8080-exec-9] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+81022 [http-nio-8080-exec-10] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+913758 [http-nio-8080-exec-2] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+914861 [http-nio-8080-exec-3] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+919889 [http-nio-8080-exec-7] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+534  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 15716 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+535  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+535  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+1929 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.687 seconds (process running for 2.288)
+1932 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+4208 [http-nio-8080-exec-4] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+9713 [http-nio-8080-exec-3] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+565  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 14024 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+567  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+568  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+1990 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.737 seconds (process running for 2.372)
+1993 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+595  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 15096 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+596  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+597  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+2164 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.85 seconds (process running for 2.534)
+2168 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+3174 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+4110 [http-nio-8080-exec-3] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+5610 [http-nio-8080-exec-5] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+6310 [http-nio-8080-exec-6] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+9580 [http-nio-8080-exec-9] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+10114 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+598  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 20464 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+602  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+603  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+1992 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.719 seconds (process running for 2.351)
+1994 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+3975 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+7171 [http-nio-8080-exec-2] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+7707 [http-nio-8080-exec-5] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+8164 [http-nio-8080-exec-6] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+8552 [http-nio-8080-exec-9] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+8737 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+8972 [http-nio-8080-exec-2] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+757  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 12892 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+759  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+761  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+2849 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 2.528 seconds (process running for 3.209)
+2851 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+3977 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+577  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 1468 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+582  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+584  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+1885 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.622 seconds (process running for 2.298)
+1887 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+19963 [http-nio-8080-exec-2] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+531  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 20088 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+534  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+535  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+2372 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 2.124 seconds (process running for 2.7)
+2374 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+2870 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+585  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 20108 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+586  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+587  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+2028 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.748 seconds (process running for 2.377)
+2031 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+2705 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+4505 [http-nio-8080-exec-3] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+4975 [http-nio-8080-exec-5] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+558  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 11312 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+559  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+560  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+1911 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.649 seconds (process running for 2.269)
+1913 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+5822 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+6797 [http-nio-8080-exec-2] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+7489 [http-nio-8080-exec-6] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+7908 [http-nio-8080-exec-5] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+21856 [http-nio-8080-exec-4] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+22454 [http-nio-8080-exec-3] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+22659 [http-nio-8080-exec-7] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+22889 [http-nio-8080-exec-8] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+31053 [http-nio-8080-exec-10] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+50523 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/13777112bf8c41c2a40f653a3868702b.jpg
+543  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 11396 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+544  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+545  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+1892 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.631 seconds (process running for 2.237)
+1894 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+8595 [http-nio-8080-exec-2] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/13777112bf8c41c2a40f653a3868702b.jpg
+558  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 10092 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+560  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+560  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+1905 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.647 seconds (process running for 2.236)
+1906 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+6002 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/13777112bf8c41c2a40f653a3868702b.jpg
+566  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 18812 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+568  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+568  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+2044 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.801 seconds (process running for 2.377)
+2048 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+4141 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/77e0e274132c4cebae76fb80cb6db5f4.jpg
+66611 [http-nio-8080-exec-3] INFO  c.m.u.controller.FilesController - get file 8B5B15A6EC4A2BFCA945CFD09AEC602A/13777112bf8c41c2a40f653a3868702b.jpg
+544  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 19288 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+546  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+547  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+1908 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.654 seconds (process running for 2.254)
+1909 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+2806 [http-nio-8080-exec-1] INFO  c.m.u.s.FilesStorageServiceImpl - File February_Sunset_in_Tallinn.jpg saved as uploads\890A6A2798C3113BBDE4909737F03AA1\2d4c49605f9746ac9ef5edd46bdc68d1.jpg, url: http://localhost:8080/file/890A6A2798C3113BBDE4909737F03AA1/2d4c49605f9746ac9ef5edd46bdc68d1.jpg
+2813 [http-nio-8080-exec-1] INFO  c.m.u.s.FilesStorageServiceImpl - File 20190502_Newhaven_to_Dieppe_Ferry_5.jpg saved as uploads\890A6A2798C3113BBDE4909737F03AA1\b92769afe09e4e828fd950b8ee0d682b.jpg, url: http://localhost:8080/file/890A6A2798C3113BBDE4909737F03AA1/b92769afe09e4e828fd950b8ee0d682b.jpg
+13434 [http-nio-8080-exec-7] INFO  c.m.u.controller.FilesController - get file 890A6A2798C3113BBDE4909737F03AA1/2d4c49605f9746ac9ef5edd46bdc68d1.jpg
+34648 [http-nio-8080-exec-6] INFO  c.m.u.s.FilesStorageServiceImpl - File February_Sunset_in_Tallinn.jpg saved as uploads\890A6A2798C3113BBDE4909737F03AA1\9dc37851a0254ee080d2f8f36dfcbc0a.jpg, url: http://localhost:8080/file/890A6A2798C3113BBDE4909737F03AA1/9dc37851a0254ee080d2f8f36dfcbc0a.jpg
+34662 [http-nio-8080-exec-6] INFO  c.m.u.s.FilesStorageServiceImpl - File 20190502_Newhaven_to_Dieppe_Ferry_5.jpg saved as uploads\890A6A2798C3113BBDE4909737F03AA1\2c9e6c65562944e9b07de016ed47ab0e.jpg, url: http://localhost:8080/file/890A6A2798C3113BBDE4909737F03AA1/2c9e6c65562944e9b07de016ed47ab0e.jpg
+34665 [http-nio-8080-exec-6] INFO  c.m.u.s.FilesStorageServiceImpl - File png-transparent-free-pic-web-design-label-text-thumbnail.png saved as uploads\890A6A2798C3113BBDE4909737F03AA1\88ef79917cc842a0a31cb993f345c903.png, url: http://localhost:8080/file/890A6A2798C3113BBDE4909737F03AA1/88ef79917cc842a0a31cb993f345c903.png
+34690 [http-nio-8080-exec-6] INFO  c.m.u.s.FilesStorageServiceImpl - File комуналка280523.pdf saved as uploads\890A6A2798C3113BBDE4909737F03AA1\6caea42397df47b1a4bce5d5f7e00f73.pdf, url: http://localhost:8080/file/890A6A2798C3113BBDE4909737F03AA1/6caea42397df47b1a4bce5d5f7e00f73.pdf
+38679 [http-nio-8080-exec-4] INFO  c.m.u.controller.FilesController - get file 890A6A2798C3113BBDE4909737F03AA1/88ef79917cc842a0a31cb993f345c903.png
+44327 [http-nio-8080-exec-3] INFO  c.m.u.controller.FilesController - get file 890A6A2798C3113BBDE4909737F03AA1/6caea42397df47b1a4bce5d5f7e00f73.pdf
+51520 [http-nio-8080-exec-5] INFO  c.m.u.controller.FilesController - get file 890A6A2798C3113BBDE4909737F03AA1/6caea42397df47b1a4bce5d5f7e00f73.pdf
+322795 [http-nio-8080-exec-8] INFO  c.m.u.s.FilesStorageServiceImpl - File jpegsystems-home.jpg saved as uploads\890A6A2798C3113BBDE4909737F03AA1\9edfc71f8da84e3289841a8b8721e9cf.jpg, url: http://localhost:8080/file/890A6A2798C3113BBDE4909737F03AA1/9edfc71f8da84e3289841a8b8721e9cf.jpg
+322806 [http-nio-8080-exec-8] INFO  c.m.u.s.FilesStorageServiceImpl - File png-transparent-free-pic-web-design-label-text-thumbnail.png saved as uploads\890A6A2798C3113BBDE4909737F03AA1\9a48519d5ae049ebb6637c519dca7db1.png, url: http://localhost:8080/file/890A6A2798C3113BBDE4909737F03AA1/9a48519d5ae049ebb6637c519dca7db1.png
+322815 [http-nio-8080-exec-8] INFO  c.m.u.s.FilesStorageServiceImpl - File IPv4 против IPv6.pdf saved as uploads\890A6A2798C3113BBDE4909737F03AA1\c442f241f6854d889de38bebe8344d51.pdf, url: http://localhost:8080/file/890A6A2798C3113BBDE4909737F03AA1/c442f241f6854d889de38bebe8344d51.pdf
+326827 [http-nio-8080-exec-6] INFO  c.m.u.controller.FilesController - get file 890A6A2798C3113BBDE4909737F03AA1/9edfc71f8da84e3289841a8b8721e9cf.jpg
+333056 [http-nio-8080-exec-4] INFO  c.m.u.controller.FilesController - get file 890A6A2798C3113BBDE4909737F03AA1/9a48519d5ae049ebb6637c519dca7db1.png
+337939 [http-nio-8080-exec-3] INFO  c.m.u.controller.FilesController - get file 890A6A2798C3113BBDE4909737F03AA1/c442f241f6854d889de38bebe8344d51.pdf
+345300 [http-nio-8080-exec-5] INFO  c.m.u.controller.FilesController - get file 890A6A2798C3113BBDE4909737F03AA1/c442f241f6854d889de38bebe8344d51.pdf
+375572 [http-nio-8080-exec-10] INFO  c.m.u.controller.FilesController - get file 890A6A2798C3113BBDE4909737F03AA1/9a48519d5ae049ebb6637c519dca7db1.png
+386039 [http-nio-8080-exec-1] INFO  c.m.u.controller.FilesController - get file 890A6A2798C3113BBDE4909737F03AA1/9edfc71f8da84e3289841a8b8721e9cf.jpg
+645  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 20516 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+646  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+647  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+2259 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.92 seconds (process running for 2.726)
+2261 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+28956 [http-nio-8080-exec-1] INFO  c.m.u.s.FilesStorageServiceImpl - File jpegsystems-home.jpg saved as uploads\50F51E67376B11986EBE5CEC58C1528A\c17933f76f29410a9ba9830a50e69bcc.jpg, url: http://localhost:8080/file/50F51E67376B11986EBE5CEC58C1528A/c17933f76f29410a9ba9830a50e69bcc.jpg
+28964 [http-nio-8080-exec-1] INFO  c.m.u.s.FilesStorageServiceImpl - File png-transparent-free-pic-web-design-label-text-thumbnail.png saved as uploads\50F51E67376B11986EBE5CEC58C1528A\640c1f20e69243ae938c8bbde2305b7a.png, url: http://localhost:8080/file/50F51E67376B11986EBE5CEC58C1528A/640c1f20e69243ae938c8bbde2305b7a.png
+28981 [http-nio-8080-exec-1] INFO  c.m.u.s.FilesStorageServiceImpl - File IPv4 против IPv6.pdf saved as uploads\50F51E67376B11986EBE5CEC58C1528A\769b92cd5e0b4d8b801ff20b0acf0042.pdf, url: http://localhost:8080/file/50F51E67376B11986EBE5CEC58C1528A/769b92cd5e0b4d8b801ff20b0acf0042.pdf
+35674 [http-nio-8080-exec-2] INFO  c.m.u.controller.FilesController - get file 50F51E67376B11986EBE5CEC58C1528A/c17933f76f29410a9ba9830a50e69bcc.jpg
+888  [main] INFO  c.m.upload.UploadApplicationTests - Starting UploadApplicationTests using Java 19.0.2 with PID 21120 (started by Inspiron in C:\project\upload)
+890  [main] DEBUG c.m.upload.UploadApplicationTests - Running with Spring Boot v3.0.5, Spring v6.0.7
+892  [main] INFO  c.m.upload.UploadApplicationTests - No active profile set, falling back to 1 default profile: "default"
+3108 [main] INFO  c.m.upload.UploadApplicationTests - Started UploadApplicationTests in 2.495 seconds (process running for 3.692)
+3113 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+623  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 19.0.2 with PID 20332 (C:\project\upload\target\classes started by Inspiron in C:\project\upload)
+626  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+627  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+757  [main] INFO  c.m.upload.UploadApplicationTests - Starting UploadApplicationTests using Java 18.0.2.1 with PID 2980 (started by igork in C:\Users\igork\Desktop\Files_Ms\upload)
+757  [main] DEBUG c.m.upload.UploadApplicationTests - Running with Spring Boot v3.0.5, Spring v6.0.7
+758  [main] INFO  c.m.upload.UploadApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2273 [main] INFO  c.m.upload.UploadApplicationTests - Started UploadApplicationTests in 1.728 seconds (process running for 2.757)
+2277 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
