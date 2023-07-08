@@ -30,13 +30,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Controller
-@CrossOrigin("http://localhost:8081")
+@RestController
 @Slf4j
 public class FilesController {
 
     @Autowired
     FilesStorageService storageService;
+
+    @GetMapping("/helloWorld")
+    public String helloWorld(){
+        return "Hello from Upload Microservice!";
+    }
 
 
     @PostMapping("/upload")

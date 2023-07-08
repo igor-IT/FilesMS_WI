@@ -27,7 +27,7 @@ public class WebSecurityConfig   {
         http.authorizeHttpRequests(autorizeRequests -> autorizeRequests
                // .dispatcherTypeMatchers(FORWARD, ERROR).permitAll()
 
-              .requestMatchers(HttpMethod.POST, "/upload").permitAll()
+              .requestMatchers("/*").permitAll()
                 .requestMatchers(HttpMethod.GET,
                              "/file/**",
                               "/file").permitAll()
