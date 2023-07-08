@@ -1,0 +1,11 @@
+Это то что должен выполнять дженкинс.
+
+Clone from git - https://github.com/igor-IT/FilesMS_WI.git
+
+Перейти в папку проекта и запустить  -  mvn clean install
+
+После чего запустить - mvn clean package spring-boot:repackage
+
+После чего зайти в папку target которая создасться после выполнения команды выше. И запустить - java -jar target/spring-boot-ops.jar 
+ВАЖНО -  java -jar target/spring-boot-ops.jar ----- spring-boot-ops.jar это название проета нужно взять с папки target(в этом проете будет другое название, spring-boot-ops.jar - это как пример)
+у нас будет UploadMS.2307.0.jar - запустить этот файл и проверить на порту 8080 - http://localhost:8080/helloWorld
