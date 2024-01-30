@@ -1,10 +1,8 @@
 package com.microservice.upload.controller;
 
-import com.microservice.upload.message.ResponseMessage;
 import com.microservice.upload.model.FileInfo;
 import com.microservice.upload.model.UserResponse;
 import com.microservice.upload.service.FilesStorageService;
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FilenameUtils;
@@ -14,21 +12,13 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.annotation.Secured;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @Slf4j
@@ -42,11 +32,9 @@ public class FilesController {
         return "Hello from Upload Microservice!";
     }
 
-
     @PostMapping("/upload")
     public ResponseEntity<UserResponse> uploadFile(@RequestParam MultipartFile[] files, HttpSession session) {
         String sessionId = session.getId();
-
 
         List<FileInfo> filesInfo = new ArrayList<>();
 
@@ -73,9 +61,6 @@ public class FilesController {
         }
     }
 
-
-
-
     @GetMapping(value ="/file/{dir}/{filename:.+}")
     @ResponseBody
     public ResponseEntity<Resource> getFile(@PathVariable String dir, @PathVariable String filename) {
@@ -100,9 +85,7 @@ public class FilesController {
         } catch (RuntimeException e) {
             return ResponseEntity.status(404).build();
         }
-
     }
-
 
     @DeleteMapping("/file/{dir}/{filename:.+}")
     @ResponseBody
@@ -116,6 +99,5 @@ public class FilesController {
             log.error(String.format("delete wrong %s", fullName));
             return ResponseEntity.badRequest().body(e.getMessage());
         }
-
     }
 }
