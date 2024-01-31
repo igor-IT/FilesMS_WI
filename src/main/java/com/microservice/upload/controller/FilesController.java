@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -32,9 +33,22 @@ public class FilesController {
         return "Hello from Upload Microservice!";
     }
 
+    @GetMapping("/delAll")
+    public String removeAllFiles(){
+        //Added dummy folder name
+        String sessionId = "TestingFolderForUpload";
+        try {
+           storageService.deleteAllFiles(sessionId);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return "Removed";
+    }
+
     @PostMapping("/upload")
     public ResponseEntity<UserResponse> uploadFile(@RequestParam MultipartFile[] files, HttpSession session) {
-        String sessionId = session.getId();
+        //Added dummy folder name
+        String sessionId = "TestingFolderForUpload";
 
         List<FileInfo> filesInfo = new ArrayList<>();
 

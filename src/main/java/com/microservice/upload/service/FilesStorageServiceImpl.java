@@ -12,6 +12,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
+import org.apache.commons.io.FileUtils;
 
 import com.microservice.upload.model.FileInfo;
 import com.microservice.upload.util.ImageUtil;
@@ -134,5 +135,11 @@ public class FilesStorageServiceImpl implements FilesStorageService{
         }  catch (IOException e) {
             throw new RuntimeException("Error: " + e.getMessage());
         }
+    }
+
+    @Override
+    public void deleteAllFiles(String dirName) throws IOException {
+        String newDir = root.toString().concat("/").concat(dirName);
+        FileUtils.deleteDirectory(Path.of(newDir).toFile());
     }
 }

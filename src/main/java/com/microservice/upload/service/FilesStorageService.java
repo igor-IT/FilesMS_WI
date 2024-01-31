@@ -19,5 +19,7 @@ public interface  FilesStorageService {
 
     public void delete(String filename);
 
+    void deleteAllFiles(String dirName) throws IOException;
+
 
 }

@@ -189,3 +189,23 @@
 143857 [http-nio-8080-exec-1] INFO  c.m.u.s.FilesStorageServiceImpl - File IMG_5059.jpeg saved as uploads/769F1E520DFC5E7A6A4803F66952BA0E/1393f784df9542a7b52dee422d2aa450.jpeg, url: http://localhost:8080/file/769F1E520DFC5E7A6A4803F66952BA0E/1393f784df9542a7b52dee422d2aa450.jpeg
 145545 [http-nio-8080-exec-3] INFO  c.m.u.s.FilesStorageServiceImpl - File IMG_5059.jpeg saved as uploads/769F1E520DFC5E7A6A4803F66952BA0E/5179ef1f3ede4ae698ef32fc8895ce69.jpeg, url: http://localhost:8080/file/769F1E520DFC5E7A6A4803F66952BA0E/5179ef1f3ede4ae698ef32fc8895ce69.jpeg
 156565 [http-nio-8080-exec-7] INFO  c.m.u.s.FilesStorageServiceImpl - File Antoine-Exupéry----Malý-princ-(SK).pdf saved as uploads/769F1E520DFC5E7A6A4803F66952BA0E/7c0ee521d60b4fb1bfe383eed2b09c60.pdf, url: http://localhost:8080/file/769F1E520DFC5E7A6A4803F66952BA0E/7c0ee521d60b4fb1bfe383eed2b09c60.pdf
+714  [main] INFO  c.m.upload.UploadApplicationTests - Starting UploadApplicationTests using Java 18.0.2.1 with PID 21544 (started by igork in D:\WorkingGit)
+715  [main] DEBUG c.m.upload.UploadApplicationTests - Running with Spring Boot v3.0.5, Spring v6.0.7
+715  [main] INFO  c.m.upload.UploadApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2989 [main] INFO  c.m.upload.UploadApplicationTests - Started UploadApplicationTests in 2.473 seconds (process running for 3.522)
+3056 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+477  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 18.0.2.1 with PID 20612 (D:\WorkingGit\target\classes started by igork in D:\WorkingGit)
+478  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+479  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+2102 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.882 seconds (process running for 2.41)
+2114 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+498  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 18.0.2.1 with PID 2372 (D:\WorkingGit\target\classes started by igork in D:\WorkingGit)
+499  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+499  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+2168 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.946 seconds (process running for 2.483)
+2173 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+522  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 18.0.2.1 with PID 21500 (D:\WorkingGit\target\classes started by igork in D:\WorkingGit)
+523  [main] DEBUG c.m.upload.UploadApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+524  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+2199 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.969 seconds (process running for 2.516)
+2205 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
