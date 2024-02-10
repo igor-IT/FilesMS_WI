@@ -180,3 +180,7 @@
 758  [main] INFO  c.m.upload.UploadApplicationTests - No active profile set, falling back to 1 default profile: "default"
 2273 [main] INFO  c.m.upload.UploadApplicationTests - Started UploadApplicationTests in 1.728 seconds (process running for 2.757)
 2277 [main] INFO  c.m.u.s.FilesStorageServiceImpl - upload dir created!
+406  [main] INFO  c.m.upload.UploadApplication - Starting UploadApplication using Java 18.0.2 with PID 1990 (/Users/vitalikoleksenko/Desktop/FilesMS_WI/target/classes started by vitalikoleksenko in /Users/vitalikoleksenko/Desktop/FilesMS_WI)
+407  [main] INFO  c.m.upload.UploadApplication - No active profile set, falling back to 1 default profile: "default"
+1548 [main] INFO  c.m.upload.UploadApplication - Started UploadApplication in 1.285 seconds (process running for 1.997)
+1552 [main] INFO  c.m.u.aop.FilesStorageServiceAspect - Upload directory created!

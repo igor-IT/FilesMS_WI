@@ -1,127 +1,128 @@
 package com.microservice.upload.service;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.nio.file.FileAlreadyExistsException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.List;
-import java.util.UUID;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 import com.microservice.upload.model.FileInfo;
+import com.microservice.upload.model.UserResponse;
+import com.microservice.upload.util.FilesStorageUtil;
 import com.microservice.upload.util.ImageUtil;
+import com.microservice.upload.util.MetricsUtility;
+import io.micrometer.core.instrument.MeterRegistry;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
-import org.springframework.core.io.UrlResource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.stream.Collectors;
+
 @Service
 @Slf4j
-public class FilesStorageServiceImpl implements FilesStorageService{
+public class FilesStorageServiceImpl implements FilesStorageService {
 
-    @Value("${site.url}") String siteUrl;
-    private final String uploadDir;
-    private final Path root ;
-    private static final List<String> ALLOWED_IMAGE_TYPES = Arrays.asList("jpg", "jpeg", "png", "gif", "bmp");
     private static final long MAX_IMAGE_SIZE = 2 * 1024 * 1024; // 2 MB
-    private final ExecutorService executorService = Executors.newFixedThreadPool(5);
-
+    @Value("${site.url}")
+    private String siteUrl;
+    private final Path root;
+    private final AtomicLong fileSize = new AtomicLong(0);
+    private final MeterRegistry meterRegistry;
+    private final ExecutorService executorService = Executors.newCachedThreadPool();
 
     @Autowired
-    public FilesStorageServiceImpl(@Value("${upload.dir}") String uploadDir ) {
-        this.uploadDir = uploadDir;
+    public FilesStorageServiceImpl(@Value("${upload.dir}") String uploadDir, MeterRegistry meterRegistry) {
         this.root = Paths.get(uploadDir);
+        this.meterRegistry = meterRegistry;
     }
 
-    //
     @Override
+    @SneakyThrows
     public void init() {
-
-        try {
-            Files.createDirectories(root);
-            log.info("upload dir created!");
-        } catch (IOException e) {
-            log.error("Could not initialize folder for upload!");
-            throw new RuntimeException("Could not initialize folder for upload!");
-        }
+        Files.createDirectories(root);
     }
+
     @Override
-    public FileInfo save(MultipartFile file, String sessionId) throws IOException {
-        String newDir = root.toString().concat("/").concat(sessionId);
+    public UserResponse uploadFiles(MultipartFile[] files, String sessionId) {
+        UserResponse response = new UserResponse();
+        LocalDateTime localDate = LocalDateTime.now();
+        DateTimeFormatter dtFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        response.setTime(dtFormatter.format(localDate));
+
+        List<FileInfo> filesInfo = Arrays.stream(files)
+                .map(file -> save(file, sessionId, meterRegistry))
+                .collect(Collectors.toList());
+
+        response.setStatus("Ok");
+        response.setFolderId(sessionId);
+        response.setBody(filesInfo);
+        return response;
+    }
+
+    @SneakyThrows
+    public FileInfo save(MultipartFile file, String sessionId, MeterRegistry meterRegistry) {
+        String newDir = root.resolve(sessionId).toString();
         Path dir = Files.createDirectories(Path.of(newDir));
 
         String originalFileName = StringUtils.cleanPath(file.getOriginalFilename());
-        String uuid = UUID.randomUUID().toString().replace("-", "");
-        String extension = FilenameUtils.getExtension(originalFileName);
-        String fileName = uuid + "." + extension.toLowerCase();
-        String fileUrl = siteUrl.concat("/").concat(sessionId).concat("/").concat(fileName);
+        String fileName = FilesStorageUtil.generateFileName(originalFileName);
+        String fileUrl = FilesStorageUtil.generateFileUrl(siteUrl, String.valueOf(file), sessionId);
         FileInfo fileInfo = new FileInfo(originalFileName, fileUrl);
 
-        if (isImageFile(extension) && file.getSize() > MAX_IMAGE_SIZE) {
-            executorService.submit(new ImageUtil(file, extension, dir.resolve(fileName)));
-            executorService.shutdown();
-            System.out.println(String.format("File %s saved as %s, url: %s", originalFileName, dir.resolve(fileName).toString(), fileUrl));
+        fileSize.set(file.getSize());
+        MetricsUtility.registerFileSizeMetric(fileSize, meterRegistry);
 
-            return fileInfo;
+        if (FilesStorageUtil.isImageFile(file) && file.getSize() > MAX_IMAGE_SIZE) {
+            executorService.submit(new ImageUtil(meterRegistry, file, FilesStorageUtil.getFileExtension(file), dir.resolve(fileName)));
         } else {
-            try {
-                Files.copy(file.getInputStream(), dir.resolve(fileName));
-                System.out.println(String.format("Non-image file %s saved as %s, url: %s", originalFileName, dir.resolve(fileName).toString(), fileUrl));
-
-                return fileInfo;
-            } catch (Exception e) {
-                if (e instanceof FileAlreadyExistsException) {
-                    log.error(String.format("A file of %s already exists",fileName));
-                    throw new RuntimeException("A file of that name already exists.");
-                }
-                log.error(String.format("save %s error %s",originalFileName,e.getMessage()));
-                throw new RuntimeException(e.getMessage());
-            }
+            FilesStorageUtil.saveFile(meterRegistry, file, dir, fileName);
         }
-    }
 
-    private boolean isImageFile(String extension) {
-        return ALLOWED_IMAGE_TYPES.contains(extension.toLowerCase());
+        return fileInfo;
     }
 
     @Override
-    public Resource load(String filename) {
+    public ResponseEntity<Resource> getFile(String dir, String filename) {
+        final String fullName = dir.concat("/").concat(filename);
 
-        try {
-            Path file = this.root.resolve(filename);
-            Resource resource = new UrlResource(file.toUri());
+        Resource file = FilesStorageUtil.load(this.root, fullName);
+        log.info(String.format("get file %s", fullName));
+        MediaType type = null;
+        String extension = FilenameUtils.getExtension(filename.toLowerCase());
 
-            if (resource.exists() || resource.isReadable()) {
-                return resource;
-            } else {
-                throw new RuntimeException("Could not read the file!");
-            }
-        } catch (MalformedURLException e) {
-            throw new RuntimeException("Error: " + e.getMessage());
+        switch (extension) {
+            case "jpg" -> type = MediaType.IMAGE_JPEG;
+            case "png" -> type = MediaType.IMAGE_PNG;
+            case "pdf" -> type = MediaType.APPLICATION_PDF;
+        }
+
+        if (type == null) {
+            return ResponseEntity.ok()
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment;  filename=\"" + file.getFilename() + "\"").body(file);
+        } else {
+            return ResponseEntity.ok().contentType(type)
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "inline;  filename=\"" + file.getFilename() + "\"").body(file);
         }
     }
-
-
 
     @Override
-    public void delete(String filename) {
-        try {
-            Path file = this.root.resolve(filename);
-            Files.deleteIfExists(file);
-
-        }  catch (IOException e) {
-            throw new RuntimeException("Error: " + e.getMessage());
-        }
+    @SneakyThrows
+    public ResponseEntity<?> delete(String filename) {
+        Path file = this.root.resolve(filename);
+        Files.deleteIfExists(file);
+        return ResponseEntity.ok().build();
     }
-
-
 }

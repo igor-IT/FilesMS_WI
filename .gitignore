@@ -32,3 +32,8 @@ build/
 ### VS Code ###
 .vscode/
 *.log
+
+### Monitoring ###
+/prometheus/
+/grafana/
+spring-metrics/grafana/

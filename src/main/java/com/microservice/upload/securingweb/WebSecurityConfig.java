@@ -17,30 +17,22 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class WebSecurityConfig   {
 
-
-
-
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
 
-
         http.authorizeHttpRequests(autorizeRequests -> autorizeRequests
                // .dispatcherTypeMatchers(FORWARD, ERROR).permitAll()
-
+              .requestMatchers("/actuator/*").permitAll()
+              .requestMatchers("/actuator/metrics/*").permitAll()
               .requestMatchers("/*").permitAll()
-                .requestMatchers(HttpMethod.GET,
-                             "/file/**",
-                              "/file").permitAll()
-                       .requestMatchers(HttpMethod.DELETE,
-                               "/file/**").hasAnyRole("ADMIN")
-                .anyRequest().authenticated()
+              .requestMatchers(HttpMethod.GET, "/file/**", "/file").permitAll()
+              .requestMatchers(HttpMethod.DELETE, "/file/**").hasAnyRole("ADMIN")
+              .anyRequest().authenticated()
         ).httpBasic();
         http.csrf().disable();
+
         return (SecurityFilterChain) http.build();
-
     }
-
-
 
     @Bean
     public UserDetailsService userDetailsService() {

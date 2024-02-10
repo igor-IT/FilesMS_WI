@@ -1,23 +1,17 @@
 package com.microservice.upload.service;
 
-import com.microservice.upload.model.FileInfo;
+import com.microservice.upload.model.UserResponse;
 import org.springframework.core.io.Resource;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
-import java.nio.file.Path;
-import java.util.List;
-import java.util.stream.Stream;
-
-public interface  FilesStorageService {
+public interface FilesStorageService {
 
     public void init();
 
-    public FileInfo save(MultipartFile file, String sessionId) throws IOException;
+    public UserResponse uploadFiles(MultipartFile[] files, String sessionId);
 
-    public Resource load(String filename);
+    public ResponseEntity<Resource> getFile(String dir, String filename);
 
-    public void delete(String filename);
-
-
+    public ResponseEntity<?> delete(String filename);
 }
